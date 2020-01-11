@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+class Liczby {
+    public static void main(String[] args) {
+
+        int sum = getSum();
+        printOddOrEven(sum);
+    }
+
+    private static void printOddOrEven(int sum) {
+        int mod=sum%2;
+        if(mod==0){
+            System.out.println(sum+" parzyta");
+
+        }else{
+            System.out.println(sum+" nieparzysta");
+        }
+    }
+
+    private static int getSum() {
+        int next = 0;
+        int sum = 0;
+        Scanner scanner = new Scanner(System.in);
+
+        while ((next = scanner.nextInt()) <= 100){
+            sum += next;
+        }
+        return sum;
+    }
+}
