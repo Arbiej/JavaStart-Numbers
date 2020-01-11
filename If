@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+class LiczbyIf {
+    public static void main(String[] args) {
+        int sum = 0;
+        Scanner scanner = new Scanner(System.in);
+
+        for(int next=scanner.nextInt();next<=100;next=scanner.nextInt()){
+            sum+=next;
+        }
+        int mod=sum%2;
+        if(mod==0){
+            System.out.println(sum+" parzyta");
+
+        }else{
+            System.out.println(sum+" nieparzysta");
+        }
+    }
+}
